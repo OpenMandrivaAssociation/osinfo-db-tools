@@ -5,16 +5,17 @@
 Group: System/Base
 Summary: Tools for managing the osinfo database
 Name: osinfo-db-tools
-Version: 1.6.0
+Version: 1.8.0
 Release: 1
 License: GPLv2+
-Source0: https://releases.pagure.org/libosinfo/%{name}-%{version}.tar.gz
+Source0: https://releases.pagure.org/libosinfo/%{name}-%{version}.tar.xz
 URL: http://libosinfo.org/
 
 ### Patches ###
 
 BuildRequires: gettext-devel
 BuildRequires: git
+BuildRequires: meson
 BuildRequires: pkgconfig(glib-2.0)
 BuildRequires: pkgconfig(libxml-2.0) >= 2.6.0
 BuildRequires: pkgconfig(libxslt) >= 1.0.0
@@ -34,16 +35,16 @@ information about operating systems for use with virtualization
 %autosetup -S git
 
 %build
-%configure
-%make_build V=1
+%meson
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS ChangeLog NEWS README
+%doc NEWS README
 %license COPYING
 %{_bindir}/osinfo-db-export
 %{_bindir}/osinfo-db-import
