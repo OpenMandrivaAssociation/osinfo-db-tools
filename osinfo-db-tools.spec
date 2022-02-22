@@ -6,7 +6,7 @@ Group: System/Base
 Summary: Tools for managing the osinfo database
 Name: osinfo-db-tools
 Version:	1.9.0
-Release:	1
+Release:	2
 License: GPLv2+
 Source0: https://releases.pagure.org/libosinfo/%{name}-%{version}.tar.xz
 URL: http://libosinfo.org/
