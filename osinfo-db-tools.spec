@@ -9,7 +9,7 @@ Version:	1.9.0
 Release:	3
 License: GPLv2+
 Source0: https://releases.pagure.org/libosinfo/%{name}-%{version}.tar.xz
-URL: http://libosinfo.org/
+URL: https://libosinfo.org/
 
 ### Patches ###
 
